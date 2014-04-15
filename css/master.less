@@ -8,3 +8,61 @@
 
 @white: #ffffff;
 
+html{
+	background: @charcoal;
+	body{
+		background: @app-gray;
+	}
+}
+
+section{
+	.page-heading{
+		h1,h2,h3,h4,h5{
+			margin-top: 0;
+		}
+	}
+}
+
+form{
+	h1,h2,h3,h4,h5{
+		margin-top: 0;
+	}
+}
+
+header{
+	padding-top: 44px;
+	padding-bottom: 60px;
+	.navbar{
+		.navbar-header{
+			.navbar-brand{
+				height: auto;
+				padding: 0 15px;
+				margin-top: -20px;
+			}
+			.navbar-toggle{
+				span.icon-bar{
+					background: @brand-primary;
+				}
+			}
+		}
+		#main-nav{
+			ul.navbar-right{
+				li{
+					a{
+						text-transform: uppercase;
+						font-size: 16px;
+						color: @charcoal;
+						font-weight: bold;
+						&:hover{
+							color: @brand-primary;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+footer{
+	background: @charcoal;
+}
