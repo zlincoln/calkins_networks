@@ -4,6 +4,7 @@
 @brand-secondary: #0A326B;
 
 @charcoal: #403C39;
+@charcoal: #414042;
 @app-gray: #EDEDED;
 
 @white: #ffffff;
@@ -12,6 +13,7 @@ html{
 	background: @charcoal;
 	body{
 		background: @app-gray;
+		color: @charcoal;
 	}
 }
 
@@ -31,7 +33,7 @@ form{
 
 header{
 	padding-top: 44px;
-	padding-bottom: 60px;
+	padding-bottom: 44px;
 	.navbar{
 		.navbar-header{
 			.navbar-brand{
@@ -63,6 +65,35 @@ header{
 	}
 }
 
+section#home-banner{
+	.image-wrap{
+		text-align: right;
+		img{
+			float: right;
+		}
+	}
+}
+
+section#partner-bar{
+	border: 2px solid @charcoal;
+	border-width: 2px 0;
+	padding: 12px 0;
+	margin-top: 40px;
+	background: @white;
+	.image-wrap{
+		height: 102px;
+		line-height: 102px;
+		text-align: center;
+		img{
+			vertical-align: middle;
+			display: inline-block;
+		}
+	}
+}
+
 footer{
 	background: @charcoal;
+	min-height: 200px;
+	padding-top: 40px;
+	color: @white;
 }
