@@ -5,7 +5,7 @@
 
 @charcoal: #403C39;
 @charcoal: #414042;
-@app-gray: #EDEDED;
+@app-gray: #F0F0F0;
 
 @white: #ffffff;
 
@@ -14,16 +14,19 @@ html{
 	body{
 		background: @app-gray;
 		color: @charcoal;
-	}
-}
-
-section{
-	.page-heading{
-		h1,h2,h3,h4,h5{
-			margin-top: 0;
+		.container{
+			max-width: 970px;
 		}
 	}
 }
+
+// section{
+// 	.page-heading{
+// 		h1,h2,h3,h4,h5{
+// 			margin-top: 0;
+// 		}
+// 	}
+// }
 
 form{
 	h1,h2,h3,h4,h5{
@@ -33,7 +36,7 @@ form{
 
 header{
 	padding-top: 44px;
-	padding-bottom: 44px;
+	padding-bottom: 22px;
 	.navbar{
 		.navbar-header{
 			.navbar-brand{
@@ -57,7 +60,28 @@ header{
 						font-weight: bold;
 						&:hover{
 							color: @brand-primary;
+							background: transparent;
 						}
+					}
+				}
+				@media(min-width: (@grid-float-breakpoint+1px)){
+					li{
+						padding: 10px;
+						a{
+							padding: 5px;
+							&:hover{
+								border-bottom: 2px solid @brand-primary;
+							}
+						}
+						&.active a{
+							color: @brand-primary;
+							border-bottom: 2px solid @brand-primary;
+						}
+					}
+				}
+				@media(max-width: @grid-float-breakpoint){
+					li a{
+						text-align: right;
 					}
 				}
 			}
@@ -66,20 +90,72 @@ header{
 }
 
 section#home-banner{
+	background: transparent url('../images/home-bg2.png') 80% top no-repeat;
+	// background-size: 700px auto;
+	padding-bottom: 40px;
+	min-height: 420px;
+	@media(max-width: 1300px){
+		background-position: right top;
+	}
+	@media(max-width: @screen-sm-max){
+		background-position: right 100px;
+	}
+	@media(max-width: @screen-xs-max){
+		// min-height: 300px;
+		background-position: center 190px;
+	}
+	@media(max-width: 435px){
+		background-position: center 240px;			
+	}
 	#cta{
 		.cta-text{
 			font-size: 20px;
+			padding-bottom: 10px;
+			@media(max-width: @screen-xs-max){
+				max-width: 80%;
+				margin: 0 auto;
+			}
+			@media(max-width: 520px){
+				font-size: 18px;
+				max-width: 90%;
+			}
+			@media(max-width: 435px){
+				font-size: 16px;
+				max-width: 100%;
+			}
 		}
 		@media(max-width: @screen-xs-max){
 			text-align: center;
 			margin-bottom: 20px;
 		}
+		@media(max-width: 520px){
+			h1{
+				font-size: 30px;
+			}
+		}
 	}
 	.image-wrap{
 		text-align: right;
+		display: none;
 		img{
 			float: right;
 		}
+		@media(max-width: @screen-xs-max){
+			display: block;
+		}
+	}
+}
+
+section#service-overview{
+	position: relative;
+	background: @brand-primary url('../images/home-bg.png') 10% 100px no-repeat;
+	padding: 20px 0;
+	.btn.btn-default{
+		background: @brand-secondary;
+		color: @white;
+	}
+	@media(max-width: @screen-sm-max){
+		background-position: -400px bottom;
 	}
 }
 
@@ -87,7 +163,6 @@ section#partner-bar{
 	border: 2px solid @charcoal;
 	border-width: 2px 0;
 	padding: 12px 0;
-	margin-top: 40px;
 	background: @white;
 	.image-wrap{
 		height: 102px;
