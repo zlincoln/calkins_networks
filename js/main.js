@@ -1,10 +1,18 @@
 $(function(){
 	$('.map-wrap').fitVids({ customSelector: "iframe[src*='google.com/maps']" });
-	$('[data-image-switch]').on('click', function(){
-		if($(this).find('img').attr('src') == 'images/home-bg2.png'){
-			$(this).find('img').attr('src', 'images/home-bg.png');
-		}else{
-			$(this).find('img').attr('src', 'images/home-bg2.png');
+	$('.affix-container').affix({
+		top: 250
+	});
+	$('.affix-container').css({
+		width: function(){
+			return $(this).parent().width()+'px';
 		}
 	});
+	$(window).on('resize', function(){
+		$('.affix-container').css({
+			width: function(){
+				return $(this).parent().width()+'px';
+			}
+		});
+	})
 });
