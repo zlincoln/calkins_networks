@@ -2,20 +2,47 @@
 
 @brand-primary: #1C9CBA;
 @brand-secondary: #0A326B;
+@brand-tertiary: @app-black;
 
 @charcoal: #403C39;
 @charcoal: #414042;
 @app-gray: #F0F0F0;
+@app-black: #232323;
 
 @white: #ffffff;
 
+@input-border: @app-black;
+@input-color-placeholder: fade(@brand-primary, 60%);
+
+.btn{
+	&.btn-bordered{
+		border: 2px solid @brand-primary;
+		background: @white;
+		color: @brand-primary;
+	}
+	&.btn-secondary{
+		background: @brand-secondary;
+		color: @white;
+	}
+	&.btn-tertiary{
+		background: @brand-tertiary url('../images/temp/tertiary-pattern.png') left top repeat;
+		color: @white;
+	}
+}
+
 html{
-	background: @charcoal;
+	background: @app-black url('../images/temp/tertiary-pattern.png') left top repeat;
 	body{
-		background: @app-gray;
+		background: @white;
 		color: @charcoal;
+		font: normal normal 300 16px/1.35 'Source Sans Pro', sans-serif;
 		.container{
 			max-width: 970px;
+		}
+		h1,h2,h3,h4,h5{
+			font-family: 'Dosis', sans-serif;
+			font-weight: 300;
+			text-transform: uppercase;
 		}
 	}
 }
@@ -36,14 +63,15 @@ form.form{
 }
 
 header{
-	padding-top: 44px;
-	padding-bottom: 22px;
+	padding: 16px 0;
+	// border-bottom: 2px solid @charcoal;
 	.navbar{
+		margin: 0;
 		.navbar-header{
 			.navbar-brand{
 				height: auto;
 				padding: 0 15px;
-				margin-top: -20px;
+				// max-width: 200px;
 			}
 			.navbar-toggle{
 				span.icon-bar{
@@ -56,9 +84,9 @@ header{
 				li{
 					a{
 						text-transform: uppercase;
-						font-size: 16px;
+						font-size: 18px;
 						color: @charcoal;
-						font-weight: bold;
+						// font-weight: bold;
 						&:hover{
 							color: @brand-primary;
 							background: transparent;
@@ -66,17 +94,18 @@ header{
 					}
 				}
 				@media(min-width: (@grid-float-breakpoint+1px)){
+					margin-top: 17px;
 					li{
 						padding: 10px;
 						a{
 							padding: 5px;
 							&:hover{
-								border-bottom: 2px solid @brand-primary;
+								border-bottom: 1px solid @brand-primary;
 							}
 						}
 						&.active a{
 							color: @brand-primary;
-							border-bottom: 2px solid @brand-primary;
+							border-bottom: 1px solid @brand-primary;
 						}
 					}
 				}
@@ -147,6 +176,127 @@ section#home-banner{
 	}
 }
 
+section#banner{
+	background: @brand-primary url('../images/temp/stock-bg.png') center center no-repeat;
+	padding: 40px 0 40px;
+	.well{
+		margin-bottom: 0;
+		.cta-wrap{
+			h3{
+				margin-top: 0;
+			}
+			@media(min-width: @screen-sm-min){
+				.btn{
+					margin-top: 20px;
+				}
+			}
+			@media(min-width: @screen-xs-min){
+				.btn{
+					// display: block;
+				}
+			}
+			@media(max-width: @screen-xs-max){
+				margin-bottom: 10px;
+				h3{
+					display: inline-block;
+					float: left;
+					// margin-bottom: 0;
+				}
+				.btn{
+					// margin-bottom: 10px;
+					margin-top: -4px;
+					float: right;
+					// display: inline-block !important;
+				}
+				p{
+					// display: none;
+					clear: both;
+					// margin-top: 10px;
+				}
+			}
+			@media(max-width: 440px){
+				h3{
+					float: none;
+				}
+				.btn{
+					margin-top: 10px;
+					float: none;
+					display: block;
+				}
+			}
+		}
+		// padding: 0;
+		// border: 20px solid @white;
+		// background: transparent;
+		// border-radius: @border-radius-base;
+		// div.cta-wrap{
+		// 	padding: 20px;
+		// 	color: @white;
+		// 	border: 4px solid @white;
+		// 	margin-right: -30px;
+		// 	height: 100%;
+		// }
+		// div.image-wrapper{
+		// 	padding-left: 20px;
+		// 	background: @white;
+		// 	img{
+		// 		border-radius: @border-radius-base;
+		// 	}
+		// }
+	}
+}
+
+#service-callout{
+	padding: 40px 0;
+	.faux-row{
+		display: table;
+		border-spacing: 30px;
+		margin: -30px;
+		.thumbnail{
+			text-align: center;
+			position: relative;
+			padding-bottom: 39px;
+			margin-bottom: 0;
+			width: 33%;
+			display: table-cell;
+			img.media-object{
+				position: absolute;
+				top: 29.154519%;
+				margin: 0 auto;
+			}
+			.btn{
+				position: absolute;
+				left: 5px;
+				bottom: 5px;
+				right: 5px;
+			}
+			&.first{
+				margin-right: 15px;
+			}
+			&.last{
+				margin-left: 15px;
+			}
+		}
+	}
+}
+
+section#interior-banner{
+	padding: 40px 0;
+	border: 8px solid @brand-primary;
+	border-width: 8px 0;
+	background: @app-black url('../images/temp/tertiary-pattern.png') left top repeat;
+	h1, h4{
+		color: @white;
+	}
+	h1{
+		margin-top: 0;
+	}
+	h4{
+		margin-bottom: 0;
+	}
+}
+
+//old
 section#service-overview{
 	position: relative;
 	background: @brand-primary url('../images/home-bg.png') 10% 100px no-repeat;
@@ -162,7 +312,7 @@ section#service-overview{
 
 section#partner-bar{
 	border: 2px solid @charcoal;
-	border-width: 2px 0;
+	border-width: 2px 0 0;
 	padding: 12px 0;
 	background: @white;
 	.image-wrap{
@@ -227,32 +377,55 @@ section#partner-bar{
 }
 
 #services{
-	padding-bottom: 40px;
-	.page-heading{
-		h2{
-			margin-bottom: 30px;
+	padding: 40px 0;
+	.btn.visible-xs{
+		margin-top: 10px;
+	}
+	@media(min-width: 481px){
+		.media .pull-right{
+			display: none;
 		}
 	}
-	.btn.visible-xs{
-		margin-top: 20px;
-		background: @brand-secondary;
+	@media(max-width: 480px){
+		.media{
+			&>.pull-left{
+				display: none;
+			}
+			.pull-right{
+				display: block;
+				margin: 0 0 20px 10px;
+			}
+			.media-body{
+				display: inline-block;
+			}
+		}
 	}
 }
 
-.affix-container form{
-	background: @brand-secondary;
-	color: @white;
-	.btn{
-		background: @white;
-		color: @brand-primary;
-		border-color: @white;
+#about-us{
+	padding: 40px 0;
+	.info-box{
+		margin-top: 20px;
+		.map-wrap-wrapper{
+			border: 4px solid @brand-primary;
+			border-radius: @border-radius-base;
+			overflow: hidden;
+		}
+	}
+}
+
+form.form{
+	border: 4px solid @brand-primary;
+	h3{
+		text-align: center;
 	}
 }
 
 
 footer{
-	background: @charcoal;
+	background: @app-black url('../images/temp/tertiary-pattern.png') left top repeat;
 	min-height: 200px;
 	padding-top: 40px;
+	border-top: 8px solid @brand-primary;
 	color: @white;
 }
