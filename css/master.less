@@ -187,7 +187,7 @@ section#banner{
 			}
 			@media(min-width: @screen-sm-min){
 				.btn{
-					margin-top: 20px;
+					margin-top: 10px;
 				}
 			}
 			@media(min-width: @screen-xs-min){
@@ -285,10 +285,11 @@ section#interior-banner{
 	border: 8px solid @brand-primary;
 	border-width: 8px 0;
 	background: @app-black url('../images/temp/tertiary-pattern.png') left top repeat;
-	h1, h4{
+	// min-height: 158px;
+	h1, h2, h4{
 		color: @white;
 	}
-	h1{
+	h1, h2{
 		margin-top: 0;
 	}
 	h4{
@@ -381,6 +382,9 @@ section#partner-bar{
 	.btn.visible-xs{
 		margin-top: 10px;
 	}
+	.media-heading{
+		color: @brand-primary;
+	}
 	@media(min-width: 481px){
 		.media .pull-right{
 			display: none;
@@ -418,6 +422,11 @@ form.form{
 	border: 4px solid @brand-primary;
 	h3{
 		text-align: center;
+		font-family: 'Helvetica Neue', Helvetica, sans-serif;
+		text-transform: none;
+	}
+	label{
+		font-weight: normal;
 	}
 }
 
