@@ -114,7 +114,7 @@
 								$messageString .= "Message: ".$messageFieldValue;
 								$messageString .= "\n\n\nIf you are recieving spam often, contact your friendly neighborhood web developer: zach@burlingtoncollective.com";
 
-								$result = $postmark->to('znlincoln@gmail.com')
+								$result = $postmark->to('derrick@calkinsnetworks.com')
 												->subject($subjectLinePart." via calkinsnetworks.com")
 												->plain_message($messageString)
 												->send();

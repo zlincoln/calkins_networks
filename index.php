@@ -66,7 +66,7 @@
 						<div class="caption">
 							<h4>IT Support</h4>
 							<p>Comprehensive solutions to IT problems. On-site or remote support services including off-hours emergency support.</p>
-							<a href="services.html#support" class="btn btn-primary">Learn More</a>
+							<a href="services.php#support" class="btn btn-primary">Learn More</a>
 						</div>
 					</div>
 				</div>
@@ -76,7 +76,7 @@
 						<div class="caption">
 							<h4>Managed IT Services</h4>
 							<p>24/7 remote monitoring services to maximize system uptime and network infrastructure health.</p>
-							<a href="services.html#security" class="btn btn-primary">Learn More</a>
+							<a href="services.php#security" class="btn btn-primary">Learn More</a>
 						</div>
 					</div>
 				</div>
@@ -86,7 +86,7 @@
 						<div class="caption">
 							<h4>Email &amp; Cloud Backup</h4>
 							<p>Email hosting packages with spam, virus and encryption protection.  Cloud backup services for all your critical data in case of distaster.</p>
-							<a href="services.html#backup" class="btn btn-primary">Learn More</a>
+							<a href="services.php#backup" class="btn btn-primary">Learn More</a>
 						</div>
 					</div>
 				</div>
@@ -97,7 +97,7 @@
 					<div class="caption">
 						<h4>IT Support</h4>
 						<p>Comprehensive solutions to IT problems. On-site or remote support services including off-hours emergency support.</p>
-						<a href="services.html#support" class="btn btn-primary">Learn More</a>
+						<a href="services.php#support" class="btn btn-primary">Learn More</a>
 					</div>
 				</div>
 				<div class="thumbnail">
@@ -105,7 +105,7 @@
 					<div class="caption">
 						<h4>Managed IT Services</h4>
 						<p>24/7 remote monitoring services to maximize system uptime and network infrastructure health.</p>
-						<a href="services.html#security" class="btn btn-primary">Learn More</a>
+						<a href="services.php#security" class="btn btn-primary">Learn More</a>
 					</div>
 				</div>
 				<div class="thumbnail last">
@@ -113,7 +113,7 @@
 					<div class="caption">
 						<h4>Email &amp; Cloud Backup</h4>
 						<p>Email hosting packages with spam, virus and encryption protection.  Cloud backup services for all your critical data in case of distaster.</p>
-						<a href="services.html#backup" class="btn btn-primary">Learn More</a>
+						<a href="services.php#backup" class="btn btn-primary">Learn More</a>
 					</div>
 				</div>
 			</div>
