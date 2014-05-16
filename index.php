@@ -139,22 +139,22 @@
 			<div class="row">
 				<div class="col-xs-6 col-sm-3">
 					<div class="image-wrap">
-						<img src="images/partners/slg.png" class="img-responsive">
+						<img src="images/partners/v2/law.png" class="img-responsive">
 					</div>
 				</div>
 				<div class="col-xs-6 col-sm-3">
 					<div class="image-wrap">
-						<img src="images/partners/gordini.png" class="img-responsive">
+						<img src="images/partners/v2/gordini.png" class="img-responsive">
 					</div>
 				</div>
 				<div class="col-xs-6 col-sm-3">
 					<div class="image-wrap">
-						<img src="images/partners/lobe.png" class="img-responsive">
+						<img src="images/partners/v2/lobe.png" class="img-responsive">
 					</div>
 				</div>
 				<div class="col-xs-6 col-sm-3">
 					<div class="image-wrap">
-						<img src="images/partners/lodge_shelburne.png" class="img-responsive">
+						<img src="images/partners/v2/lodge.png" class="img-responsive">
 					</div>
 				</div>
 			</div>
