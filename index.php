@@ -221,7 +221,7 @@
 	<div id="contact-modal" class="modal fade">
 		<div class="modal-dialog">
 			<div class="modal-content">
-				<form class="form" method="post" action="<?= $_SERVER['PHP_SELF']; ?>">
+				<form class="form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 					<div class="modal-header">
 						<button class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 						<h4 class="modal-title">Let us know how we can help you!</h4>
@@ -231,7 +231,7 @@
 							<label for="name">Name</label>
 							<input type="text" class="form-control" id="name" name="name" placeholder="Joe Smith">
 						</div>
-						<div class="form-group <?= isset($email) && spamcheck($email) && !$success ? 'has-error' : ''; ?>">
+						<div class="form-group <?php echo isset($email) && spamcheck($email) && !$success ? 'has-error' : ''; ?>">
 							<label for="email">Email</label>
 							<input type="email" class="form-control" id="email" name="email" placeholder="example@example.com">
 						</div>
@@ -241,7 +241,7 @@
 						</div>
 					</div>
 					<input type="hidden" name="honeypot">
-					<input type="hidden" id="notification" name="success" value="<?= $success ? 'success' : ''; ?>">
+					<input type="hidden" id="notification" name="success" value="<?php echo $success ? 'success' : ''; ?>">
 					<div class="modal-footer clearfix">
 						<button type="submit" class="btn btn-primary pull-right">Submit</button>
 					</div>

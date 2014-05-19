@@ -125,13 +125,13 @@
 						}
 
 					?>
-					<form class="form well clearfix" method="post" action="<?= $_SERVER['PHP_SELF']; ?>">
+					<form class="form well clearfix" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 						<h3>Let us know how we can help</h3>
 						<div class="form-group">
 							<label for="name">Name</label>
 							<input type="text" class="form-control" id="name" name="name" placeholder="Joe Smith">
 						</div>
-						<div class="form-group <?= isset($email) && spamcheck($email) && !$success ? 'has-error' : ''; ?>">
+						<div class="form-group <?php echo isset($email) && spamcheck($email) && !$success ? 'has-error' : ''; ?>">
 							<label for="email">Email</label>
 							<input type="email" class="form-control" id="email" name="email" placeholder="example@example.com">
 						</div>
@@ -140,7 +140,7 @@
 							<textarea rows="5" class="form-control" id="message" name="message" placeholder="Questions? Looking for a particular service?"></textarea>
 						</div>
 						<input type="hidden" name="honeypot">
-						<input type="hidden" id="notification" name="success" value="<?= $success ? 'success' : ''; ?>">
+						<input type="hidden" id="notification" name="success" value="<?php echo $success ? 'success' : ''; ?>">
 						<button type="submit" name="submit" class="btn btn-primary pull-right">Submit</button>
 					</form>
 				</div>
